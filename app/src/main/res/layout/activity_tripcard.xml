@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/imgTop"
+        style="@style/SizeStyle"
+        android:src="@drawable/top"
+        app:layout_constraintDimensionRatio="h,1000:404"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        style="@style/SizeStyle"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape"
+        app:layout_constraintDimensionRatio="h,948:1000"
+        app:layout_constraintTop_toBottomOf="@+id/imgTop">
+
+        <TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="132****1100的动态行程卡" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMobile"
+            android:textColor="@android:color/darker_gray"
+            android:text="更新于：2020.10.20 14:55:44" />
+
+        <TextView
+            android:id="@+id/tvRouteArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="42dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@android:color/darker_gray"
+            android:text="您于前十四天内到达或途径：上海市" />
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:src="@drawable/arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgBottom"
+        style="@style/SizeStyle"
+        android:src="@drawable/bottom"
+        app:layout_constraintDimensionRatio="h,1000:340"
+        app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+    <ImageView
+        android:id="@+id/imgWechat"
+        style="@style/SizeStyle"
+        android:src="@drawable/wechat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1000:130" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
